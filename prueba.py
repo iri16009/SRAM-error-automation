@@ -32,15 +32,15 @@ log.close()
 
 #nodos1 = list(dict.fromkeys(nodos)) # Esto era para que n
 
-
+archivo_spf = "prueba13.spf"
 # MODIFICANDO EL ARCHIVO starrc_results_SRAMmatrix
 # with is like your try .. finally block in this case
-with open('prueba2.spf', 'r') as file:
+with open(archivo_spf, 'r') as file:
     # read a list of lines into data
     data = file.readlines()
 file.close()
 
-spf = open("prueba2.spf", "a+")
+spf = open(archivo_spf, "a+")
 spf.seek(0) # Porque por default se pone al final del archivo
 count1 = 0;
 count3 = 0;
@@ -135,6 +135,6 @@ for i in np.arange(0, len(lineas)):
 #print(len(texto))
 #print(len(lineas))
 
-with open("prueba2.spf", 'w') as file:
+with open(archivo_spf, 'w') as file:
     file.writelines( data )
 file.close()
